@@ -203,7 +203,7 @@ async def _(event):
             try:
                 await tembm(JoinChannelRequest(url))
             except:
-                bott = url.split('/')[-1]
+                bott = url.split('/bm1')[-1]
                 await tembm(ImportChatInviteRequest(bott))
             msg2 = await tembm.get_messages(bot_usernamee, limit=1)
             await msg2[0].click(text='تحقق')
