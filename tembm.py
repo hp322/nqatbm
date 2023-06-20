@@ -1,4 +1,4 @@
-rom telethon.tl.functions.channels import LeaveChannelRequest
+from telethon.tl.functions.channels import LeaveChannelRequest
 import telethon
 from time import sleep
 from telethon import events
@@ -91,15 +91,15 @@ async def OwnerStart(event):
     if sender.id == ownerhson_id :
         order = await event.reply("""**اوامر الاسـتخدام 
 
-- @ZMMBOT - `/bm1`
-- @A_MAN9300BOT - `/bm2`
-- @MARKTEBOT - `/bm3`
-- @XNSEX21BOT - `/bm4`
+- @ZMMBOT - `/point1`
+- @A_MAN9300BOT - `/point2`
+- @MARKTEBOT - `/point3`
+- @XNSEX21BOT - `/point4`
 ارسـل - `/bm`
-للمغادرة - `/llbm`
-للتحويل - `/trabm`
-للمعلومات - `/infbm`
-للانضمام - `/jobm`**""")
+للمغادرة - `/lpoint`
+للتحويل - `/transfer`
+للمعلومات - `/infoacc`
+للانضمام - `/join`**""")
 
 
 
@@ -129,8 +129,18 @@ async def _(event):
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-tembm
+╭──⌯𝗦𝗢𝗨𝗥𝗖𝗘 bm⌯──╮
+
+※ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 -  bm    ※
+
+※ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 - 𝟭.𝟬 - 𝗥𝗘𝗩𝗜𝗦𝗘𝗗   ※
+
+※ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 - 𝗛𝗨𝗦𝗔𝗠.𝗙𝗔  ※
+
+╰───⌯bm 𝗣𝗢𝗜𝗡𝗧⌯───╯
 ''')
+
+@tembm.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
     await event.reply("**سيتم تجميع النقاط**")
     await event.edit("**سيتم تجميع النقاط**")
@@ -173,7 +183,7 @@ async def _(event):
             await event.edit(f"**القناة رقم {chs}**")
     await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/bm2'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/point2'))
 async def _(event):
     await event.reply("**سيتم تجميع النقاط**")
     await event.edit("**سيتم تجميع النقاط**")
@@ -217,7 +227,7 @@ async def _(event):
     await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/bm3'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/point3'))
 async def _(event):
     await event.reply("**سيتم تجميع النقاط**")
     await event.edit("**سيتم تجميع النقاط**")
@@ -261,7 +271,7 @@ async def _(event):
     await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/bm4'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/point4'))
 async def _(event):
     await event.reply("**سيتم تجميع النقاط**")
     await event.edit("**سيتم تجميع النقاط**")
@@ -485,7 +495,7 @@ async def _(event):
 
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm1 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -501,7 +511,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm2 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt2 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -517,7 +527,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm3 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt3 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -533,7 +543,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm4 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt4 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -549,7 +559,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm1'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint1'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -562,7 +572,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/bm2'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint2'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -575,7 +585,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
  
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm3'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint3'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -588,7 +598,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm4'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint4'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -602,7 +612,7 @@ async def OwnerStart(event):
     await msg[0].forward_to(ownerhson_id)
     
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/llbm'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -627,28 +637,28 @@ async def OwnerStart(event):
     
     
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/trabm'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/transfer'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply("""** قسم تحويل النقاط
         
-• @ZMMBOT - `/bbm1 + عدد النقاط `
-• @A_MAN9300BOT - `/bbm2 + عدد النقاط`
-• @MARKTEBOT - `/bbm3 + عدد النقاط `
-• @XNSEX21BOT - `/bbm4 + عدد النقاط`**""")
+• @ZMMBOT - `/pt1 + عدد النقاط `
+• @A_MAN9300BOT - `/pt2 + عدد النقاط`
+• @MARKTEBOT - `/pt3 + عدد النقاط `
+• @XNSEX21BOT - `/pt4 + عدد النقاط`**""")
 
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/infbm'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
         order = await event.reply("""** قسم معلومات البوتات
-• @ZMMBOT - `/nbm1`
-• @A_MAN9300BOT - `/nbm2`
-• @MARKTEBOT - `/nbm3`
-• @XNSEX21BOT - `/nbm4`**""")
+• @ZMMBOT - `/npoint1`
+• @A_MAN9300BOT - `/npoint2`
+• @MARKTEBOT - `/npoint3`
+• @XNSEX21BOT - `/npoint4`**""")
 
 
 @tembm.on(events.NewMessage(outgoing=False, pattern=r'^/button (.*) (.*)'))
@@ -670,7 +680,7 @@ async def OwnerStart(event):
         msg = await tembm.get_messages(userbott, limit=1)
         await msg[0].forward_to(ownerhson_id)
         
-@tembm.on(events.NewMessage(outgoing=False, pattern='/jobm'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/join'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
