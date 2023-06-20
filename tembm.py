@@ -1,4 +1,4 @@
-from telethon.tl.functions.channels import LeaveChannelRequest
+rom telethon.tl.functions.channels import LeaveChannelRequest
 import telethon
 from time import sleep
 from telethon import events
@@ -46,7 +46,7 @@ bot_usernameeee = '@xnsex21bot'
 
 ownerhson_id = (int(DEVLOO))
 LOGS = logging.getLogger(__name__)
-DEVS = [5159123009]
+DEVS = [5299626487]
 
 
 
@@ -89,17 +89,17 @@ async def OwnerStart(event):
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply("""**〠 اوامر حساب المسؤول
+        order = await event.reply("""**اوامر الاسـتخدام 
 
-• @ZMMBOT - `/point1`
-• @A_MAN9300BOT - `/point2`
-• @MARKTEBOT - `/point3`
-• @XNSEX21BOT - `/point4`
-• SEND - `/bm`
-• LEAVE CHANNEL & GROUP - `/lpoint`
-• TRANSFER POINT - `/transfer`
-• INFO ACCOUNT - `/infoacc`
-• JOIN BOT CHANNEL - `/join`**""")
+- @ZMMBOT - `/bm1`
+- @A_MAN9300BOT - `/bm2`
+- @MARKTEBOT - `/bm3`
+- @XNSEX21BOT - `/bm4`
+ارسـل - `/bm`
+للمغادرة - `/llbm`
+للتحويل - `/trabm`
+للمعلومات - `/infbm`
+للانضمام - `/jobm`**""")
 
 
 
@@ -125,25 +125,15 @@ async def _(event):
 @tembm.on(events.NewMessage(outgoing=True, pattern=r"\.فحص"))
 async def _(event):
     start = datetime.datetime.now()
-    await event.edit("**جاري الفحص..**")
+    await event.edit("**سيتم الفحص..**")
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(f'''
-╭──⌯𝗦𝗢𝗨𝗥𝗖𝗘 bm⌯──╮
-
-※ 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 -  bm    ※
-
-※ 𝗩𝗘𝗥𝗦𝗜𝗢𝗡 - 𝟭.𝟬 - 𝗥𝗘𝗩𝗜𝗦𝗘𝗗   ※
-
-※ 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥 - 𝗛𝗨𝗦𝗔𝗠.𝗙𝗔  ※
-
-╰───⌯bm 𝗣𝗢𝗜𝗡𝗧⌯───╯
+tembm
 ''')
-
-@tembm.on(events.NewMessage(outgoing=False, pattern='/point1'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**سيتم تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_username)
     await tembm.send_message(bot_username, '/start')
@@ -162,7 +152,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -181,12 +171,12 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/point2'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/bm2'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**سيتم تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernamee)
     await tembm.send_message(bot_usernamee, '/start')
@@ -205,7 +195,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -224,13 +214,13 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/point3'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/bm3'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**سيتم تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernameee)
     await tembm.send_message(bot_usernameee, '/start')
@@ -249,7 +239,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -268,13 +258,13 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/point4'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/bm4'))
 async def _(event):
-    await event.reply("**جاري تجميع النقاط**")
-    await event.edit("**جاري تجميع النقاط**")
+    await event.reply("**سيتم تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernameeee)
     await tembm.send_message(bot_usernameeee, '/start')
@@ -293,7 +283,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -312,12 +302,12 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 @tembm.on(events.NewMessage(outgoing=True, pattern=".تجميع المليار"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_username)
     await tembm.send_message(bot_username, '/start')
@@ -336,7 +326,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -355,14 +345,14 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
     
     
     
 @tembm.on(events.NewMessage(outgoing=True, pattern=".تجميع الجوكر"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernamee)
     await tembm.send_message(bot_usernamee, '/start')
@@ -381,7 +371,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -400,12 +390,12 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 @tembm.on(events.NewMessage(outgoing=True, pattern=".تجميع العقاب"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernameee)
     await tembm.send_message(bot_usernameee, '/start')
@@ -424,7 +414,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -443,13 +433,13 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
 @tembm.on(events.NewMessage(outgoing=True, pattern=".تجميع العرب"))
 async def _(event):
 
-    await event.edit("**جاري تجميع النقاط**")
+    await event.edit("**سيتم تجميع النقاط**")
     joinu = await tembm(JoinChannelRequest('tembm'))
     channel_entity = await tembm.get_entity(bot_usernameeee)
     await tembm.send_message(bot_usernameeee, '/start')
@@ -468,7 +458,7 @@ async def _(event):
                                                offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
         msgs = list.messages[0]
         if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-            await tembm.send_message(event.chat_id, f"**تم الانتهاء من التجميع | SY**")
+            await tembm.send_message(event.chat_id, f"**تم تجميع نقـاط...! **")
 
             break
         url = msgs.reply_markup.rows[0].buttons[0].url
@@ -487,7 +477,7 @@ async def _(event):
             await msg2[0].click(text='التالي')
             chs += 1
             await event.edit(f"**القناة رقم {chs}**")
-    await tembm.send_message(event.chat_id, "**تم الانتهاء من التجميع | SY**")
+    await tembm.send_message(event.chat_id, "**تم تجميع نقـاط...! **")
 
 
 ##########################################
@@ -495,7 +485,7 @@ async def _(event):
 
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt1 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm1 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -511,7 +501,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt2 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm2 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -527,7 +517,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt3 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm3 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -543,7 +533,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/pt4 (.*)'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bbm4 (.*)'))
 async def OwnerStart(event):
     pt = event.pattern_match.group(1) 
     sender = await event.get_sender()
@@ -559,7 +549,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint1'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm1'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -572,7 +562,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint2'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/bm2'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -585,7 +575,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
  
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint3'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm3'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -598,7 +588,7 @@ async def OwnerStart(event):
 
     await msg[0].forward_to(ownerhson_id)
     
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/npoint4'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/nbm4'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
@@ -612,7 +602,7 @@ async def OwnerStart(event):
     await msg[0].forward_to(ownerhson_id)
     
 
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'/lpoint'))
+@tembm.on(events.NewMessage(outgoing=False, pattern=r'/llbm'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
@@ -620,7 +610,7 @@ async def OwnerStart(event):
         for dialog in dialogs:
             if dialog.is_channel:
                 await tembm(LeaveChannelRequest(dialog.entity))
-                await event.respond(f"**قمت بمغادرة جميع القنوات والمجموعات**")
+                await event.respond(f"** غادرت گل القنوات **")
                 
 
 
@@ -637,28 +627,28 @@ async def OwnerStart(event):
     
     
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/transfer'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/trabm'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply("""**مرحبا بك في قسم تحويل النقاط
+        order = await event.reply("""** قسم تحويل النقاط
         
-• @ZMMBOT - `/pt1 + عدد النقاط `
-• @A_MAN9300BOT - `/pt2 + عدد النقاط`
-• @MARKTEBOT - `/pt3 + عدد النقاط `
-• @XNSEX21BOT - `/pt4 + عدد النقاط`**""")
+• @ZMMBOT - `/bbm1 + عدد النقاط `
+• @A_MAN9300BOT - `/bbm2 + عدد النقاط`
+• @MARKTEBOT - `/bbm3 + عدد النقاط `
+• @XNSEX21BOT - `/bbm4 + عدد النقاط`**""")
 
 
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='/infoacc'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/infbm'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id :
-        order = await event.reply("""**مرحبا في قسم معلومات الحسابات 
-• @ZMMBOT - `/npoint1`
-• @A_MAN9300BOT - `/npoint2`
-• @MARKTEBOT - `/npoint3`
-• @XNSEX21BOT - `/npoint4`**""")
+        order = await event.reply("""** قسم معلومات البوتات
+• @ZMMBOT - `/nbm1`
+• @A_MAN9300BOT - `/nbm2`
+• @MARKTEBOT - `/nbm3`
+• @XNSEX21BOT - `/nbm4`**""")
 
 
 @tembm.on(events.NewMessage(outgoing=False, pattern=r'^/button (.*) (.*)'))
@@ -680,11 +670,11 @@ async def OwnerStart(event):
         msg = await tembm.get_messages(userbott, limit=1)
         await msg[0].forward_to(ownerhson_id)
         
-@tembm.on(events.NewMessage(outgoing=False, pattern='/join'))
+@tembm.on(events.NewMessage(outgoing=False, pattern='/jobm'))
 async def OwnerStart(event):
     sender = await event.get_sender()
     if sender.id == ownerhson_id:
-        send = await tembm.send_message(event.chat_id, "**جاري الانضمام التلقائي للقنوات**")
+        send = await tembm.send_message(event.chat_id, "** اوكف راح انضم ب جميع قنوات البوتات **")
         joinq = await tembm(JoinChannelRequest('d3boot_7'))
         joinw = await tembm(JoinChannelRequest('Fvvvv'))
         joine = await tembm(JoinChannelRequest('DzDDDD'))
@@ -692,7 +682,7 @@ async def OwnerStart(event):
         joint = await tembm(JoinChannelRequest('zzzzzz1'))
         joiny = await tembm(JoinChannelRequest('zzzzzz'))
         joini = await tembm(JoinChannelRequest('zz_MX'))
-        joino = await tembm(JoinChannelRequest('zd_e6'))
+        joino = await tembm(JoinChannelRequest('tembm'))
         joinp = await tembm(JoinChannelRequest('KTTTT'))
         joina = await tembm(JoinChannelRequest('RRXFR'))
         sendd = await tembm.send_message(event.chat_id, "**تـم الانضمام في القنوات**")
@@ -700,8 +690,5 @@ async def OwnerStart(event):
         
 
 
-print("💠 Sbmmmt 💠")
+print("")
 tembm.run_until_disconnected()
-
-
-#code skip accumulate points by t.me.zzzzl1l thank you my bro
