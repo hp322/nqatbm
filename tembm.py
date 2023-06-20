@@ -95,7 +95,7 @@ async def OwnerStart(event):
 - @A_MAN9300BOT - `/bm2`
 - @MARKTEBOT - `/bm3`
 - @XNSEX21BOT - `/bm4`
-ارسـل - `/bmm`
+ارسـل - `/bm`
 للمغادرة - `/llbm`
 للتحويل - `/trabm`
 للمعلومات - `/infbm`
@@ -482,63 +482,6 @@ async def _(event):
 
 ##########################################
 
-@tembm.on(events.NewMessage(outgoing=False, pattern='^/point (.*)'))
-async def OwnerStart(event):
-    pot = event.pattern_match.group(1) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id:
-        await event.reply("جاري تجميع النقاط")
-        await event.edit("جاري تجميع النقاط")
-        joinu = await tembm(JoinChannelRequest('saythonh'))
-        channel_entity = await tembm.get_entity(pot)
-        await tembm.send_message(pot, '/start')
-        await asyncio.sleep(4)
-        msg0 = await tembm.get_messages(pot, limit=1)
-        await msg0[0].click(2)
-        await asyncio.sleep(4)
-        msg1 = await tembm.get_messages(pot, limit=1)
-        await msg1[0].click(0)
-
-        chs = 1
-        for i in range(100):
-            await asyncio.sleep(4)
-
-            list = await tembm(GetHistoryRequest(peer=channel_entity, limit=1,
-                                                    offset_date=None, offset_id=0, max_id=0, min_id=0, add_offset=0, hash=0))
-            msgs = list.messages[0]
-            if msgs.message.find('لا يوجد قنوات في الوقت الحالي , قم يتجميع النقاط بطريقه مختلفه') != -1:
-                await tembm.send_message(event.chat_id, f"تم الانتهاء من التجميع | SY")
-
-                break
-            url = msgs.reply_markup.rows[0].buttons[0].url
-            try:
-                try:
-                    await tembm(JoinChannelRequest(url))
-                except:
-                    bott = url.split('/')[-1]
-                    await tembm(ImportChatInviteRequest(bott))
-                msg2 = await tembm.get_messages(pot, limit=1)
-                await msg2[0].click(text='تحقق')
-                chs += 1
-                await event.edit(f"تم الانضمام في {chs} قناة")
-            except:
-                msg2 = await tembm.get_messages(pot, limit=1)
-                await msg2[0].click(text='التالي')
-                chs += 1
-                await event.edit(f"القناة رقم {chs}")
-
-        await tembm.send_message(event.chat_id, "تم الانتهاء من التجميع | SY")
-        
-@tembm.on(events.NewMessage(outgoing=False, pattern=r'^/bot (.*) (.*)'))
-async def OwnerStart(event):
-    bots = event.pattern_match.group(1) 
-    ids = event.pattern_match.group(2) 
-    sender = await event.get_sender()
-    if sender.id == ownerhson_id :
-     send = await tembm.send_message(bots,f'/start {ids}')
-     sleep(6)
-    msg = await tembm.get_messages(bots, limit=2)
-    await msg[1].forward_to(ownerhson_id)
 
 
 
